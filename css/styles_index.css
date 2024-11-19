@@ -1,0 +1,241 @@
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(to right, #004d00, #00cc66);
+    background-color: #00cc66;
+    background-repeat: repeat;
+    background-size: cover;
+    height: 130vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#header {
+    color : white;
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.container {
+    width: 400px;
+    padding: 40px;
+    background: rgba(255, 255, 255, 0.9);
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    margin-bottom: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.container:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+h2 {
+    text-align: center;
+    color: #004d00;
+    margin-bottom: 30px;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+label {
+    color: #006622;
+    margin-bottom: 10px;
+    font-weight: bold;
+}
+
+input[type="text"],
+input[type="number"],
+input[type="email"],
+input[type="tel"] {
+    padding: 10px;
+    margin-bottom: 20px;
+    border: 1px solid #004d00;
+    border-radius: 5px;
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+input[type="text"]:focus,
+input[type="number"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus {
+    box-shadow: 0 0 5px #00cc66;
+}
+
+button {
+    padding: 12px;
+    background-color: #009933;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    font-size: 16px;
+    font-weight: bold;
+    width: 50%;
+    align-self: center;
+    margin-top: 15px;
+}
+
+button:hover {
+    background-color: #007f2d;
+}
+
+/* Styles for the copyright container */
+.copyright-container {
+    background: rgba(255, 255, 255, 0.9);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    color: #004d00;
+    font-size: 14px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.copyright-container:hover {
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.6);
+}
+
+/* Popup styles */
+#consentPopup {
+    display: none;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    padding: 20px;
+    border: 1px solid #006622;
+    background-color: rgba(255, 255, 255, 0.95);
+    border-radius: 10px;
+    z-index: 1000;
+    max-width: 400px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.4);
+}
+
+#consentPopup p {
+    color: #004d00;
+    margin-bottom: 20px;
+    font-size: 16px;
+}
+
+#closeConsent {
+    display: block;
+    margin: 0 auto;
+    padding: 10px 20px;
+    background-color: #009933;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#closeConsent:hover {
+    background-color: #007f2d;
+}
+
+/* Media Queries */
+@media (max-width: 768px) {
+    body {
+        height: 120vh; /* Adjust height for smaller screens */
+    }
+
+    .container {
+        width: 85%; /* Adjust container width to fit the screen */
+        padding: 20px; /* Reduce padding for smaller screens */
+    }
+
+    /* large size header */
+    #header {
+        font-size: 22px;
+        text-align: center;
+    }
+
+    h2 {
+        font-size: 20px; /* Decrease font size for smaller screens */
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"] {
+        padding: 8px; /* Adjust input padding */
+    }
+
+    button {
+        padding: 10px; /* Adjust button padding */
+        font-size: 18px; /* Reduce button font size */
+    }
+
+    .copyright-container {
+        font-size: 12px; /* Smaller font for copyright container */
+        padding: 15px; /* Adjust padding */
+        width: 85%; /* Adjust width for smaller screens */
+    }
+
+    #consentPopup {
+        width: 85%; /* Ensure popup fits within the screen */
+        padding: 15px; /* Adjust padding for popup */
+    }
+
+    #closeConsent {
+        padding: 8px 16px; /* Reduce button size */
+        font-size: 12px; /* Adjust font size for button */
+    }
+}
+
+@media (max-width: 480px) {
+    body {
+        height: 100vh; /* Adjust height for very small screens */
+    }
+
+    h2 {
+        font-size: 18px; /* Further reduce font size for very small screens */
+    }
+
+    /* large size header */
+    #header {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    .container {
+        padding: 15px; /* Compact padding for smaller devices */
+        width: 85%; /* Adjust container width */
+    }
+
+    .copyright-container {
+        font-size: 12px; /* Smaller font for copyright container */
+        padding: 15px; /* Adjust padding */
+        width: 85%; /* Adjust width for smaller screens */
+    }
+
+    input[type="text"],
+    input[type="number"],
+    input[type="email"],
+    input[type="tel"] {
+        padding: 6px; /* Compact input fields */
+        font-size: 14px; /* Smaller text inside input fields */
+    }
+
+    button {
+        padding: 8px; /* Compact buttons */
+        font-size: 16px; /* Smaller button text */
+    }
+
+    #closeConsent {
+        padding: 6px 12px; /* Compact consent button */
+    }
+}
